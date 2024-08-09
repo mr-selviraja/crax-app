@@ -11,12 +11,21 @@ const app = express();
 // Middleware to serve static files
 app.use(express.static(CLIENT_PATH));
 
+// Set the views folder manually
+app.set("views", `${CLIENT_PATH}/src/views`);
+
+// Set the view/templating engine as EJS
+app.set("view engine", "ejs");
+
 // Specify a port number for the server to serve on
 const port = process.env.PORT || 3005;
 
 // Send index.html page for GET at route '/'
 app.get("/", (req, res) => {
-    res.sendFile(`${CLIENT_PATH}/src/views/index.html`)
+    res.render(`${CLIENT_PATH}/src/views/index.ejs`, { cardDetails: {
+        title: "Some random title",
+        description: "Some random descripton"
+    }});
 });
 
 // Listen for client requests on the specified port

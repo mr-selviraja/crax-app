@@ -2,3 +2,19 @@ body {
     background: slateblue;
     color: white
 }
+
+article {
+    background: #303030;
+    width: 500px;
+    padding: 25px;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+
+article h3 {
+    color: darkgrey;
+}
+
+article p {
+    color: darkgrey;
+}
