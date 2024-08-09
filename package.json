@@ -1,0 +1,19 @@
+{
+  "name": "crax-app",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon ./server/app.js"
+  },
+  "keywords": [],
+  "author": "Selviraja Pasagadugula",
+  "license": "ISC",
+  "description": "A online cricket attax cards game developed as part of project portfolio",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
